@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sadidul Mehal | Portfolio</title>
+  <style>
+    /* Import Bahnschrift SemiBold if available */
+    @font-face {
+      font-family: 'Bahnschrift';
+      src: url('https://cdn.jsdelivr.net/gh/microsoft/clearTypeFontCollections @main/webfonts/Bahnschrift.woff2') format('woff2'),
+           url('https://cdn.jsdelivr.net/gh/microsoft/clearTypeFontCollections @main/webfonts/Bahnschrift.woff') format('woff');
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Bahnschrift', 'Segoe UI', sans-serif;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .background-animation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300%;
+      height: 300%;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.03) 0px,
+        rgba(255, 255, 255, 0.03) 10px,
+        transparent 10px,
+        transparent 20px
+      );
+      animation: moveBackground 20s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes moveBackground {
+      from {
+        transform: translate(-25%, -25%) rotate(0deg);
+      }
+      to {
+        transform: translate(-25%, -25%) rotate(360deg);
+      }
+    }
+
+    /* Hero Text Animation */
+    .hero-text {
+      font-size: 3rem;
+      text-align: center;
+      opacity: 0;
+      transform: scale(0.95);
+      animation: fadeInScale 1.5s ease forwards;
+    }
+
+    @keyframes fadeInScale {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1.5s ease-out forwards;
+      animation-delay: 0.5s;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #fff;
+      padding-left: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      border-bottom-color: #fff;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5em;
+    }
+
+    li {
+      margin-bottom: 0.5em;
+    }
+
+    /* Scroll Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header>
+    <div class="background-animation"></div>
+    <div class="hero-text">Sadidul Mehal</div>
+  </header>
+
+  <!-- About Me Section -->
+  <section class="fade-in">
+    <h2>About Me</h2>
+    <p>
+      Hi, I'm Sadidul Mehal, a creative mind with a passion for design, technology, and structured learning. I’m currently studying at RCPSC, where I focus on intellectual growth and refining my skills.
+    </p>
+    <p>
+      I love blending aesthetics with functionality—whether it's crafting sleek website designs, experimenting with smooth animations, or working with modern fonts that stand out. My attention to detail ensures that every project I touch feels professional and polished.
+    </p>
+    <p>
+      I'm also exploring the power of AI in coding, looking for ways to enhance workflows and push creative boundaries. Interactive elements, expanding cards, and dynamic backgrounds excite me because they bring digital experiences to life.
+    </p>
+    <p>
+      Beyond design, I stay engaged in academic topics, particularly plant nutrition, where I study classifications, functions, deficiencies, and sources. Even when designing assignment covers, I bring my signature green-themed, professional aesthetic into the mix.
+    </p>
+    <p>
+      For me, creativity isn't just about making things look good—it’s about making them meaningful. I strive to combine technical skills with artistic expression, shaping a personal brand that reflects innovation, precision, and a strong sense of style.
+    </p>
+  </section>
+
+  <!-- My Services Section -->
+  <section class="fade-in">
+    <h2>My Services</h2>
+    <p>I specialize in modern, professional, and interactive design, combining aesthetics with functionality to create seamless digital experiences.</p>
+    <ul>
+      <li><strong>Website Design & Development</strong><br>
+        - Custom Website Development – I build sleek, responsive websites with HTML, CSS, and JavaScript.<br>
+        - Smooth Animations & Transitions – I add dynamic effects to enhance user experience.<br>
+        - Modern UI/UX Design – Clean layouts with user-friendly navigation.
+      </li>
+      <li><strong>Interactive Elements & Branding</strong><br>
+        - Expanding Cards & Dynamic Backgrounds – I create engaging, interactive designs.<br>
+        - Uncommon Fonts & Unique Typography – Elevate brand identity with distinctive text styles.<br>
+        - Green-Themed & Nature-Inspired Designs – Professional aesthetics with a calming touch.
+      </li>
+      <li><strong>AI-Assisted Coding & Optimization</strong><br>
+        - AI Tools for Coding – Exploring AI-powered solutions to improve efficiency.<br>
+        - Web Performance Optimization – Enhancing speed and functionality for better user experience.
+      </li>
+      <li><strong>Creative & Academic Design</strong><br>
+        - Assignment Cover Design – Custom academic covers with refined, professional aesthetics.<br>
+        - Presentation Templates – Sleek, high-quality slides with modern graphics.
+      </li>
+    </ul>
+    <p>
+      I aim to blend creativity with precision, ensuring every project is polished, interactive, and aligned with the client’s vision.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="fade-in">
+    <h2>Contact</h2>
+    <p>
+      Interested in working together? Reach out at 
+      <a href="mailto:sadidulmehal.arifin@gmail.com">sadidulmehal.arifin@gmail.com</a> 
+      or call me at 
+      <a href="tel:+8801644429196">+88 01644 429196</a>.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Sadidul Mehal. All rights reserved.
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const faders = document.querySelectorAll(".fade-in");
+      const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.2 });
+
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
+
+</body>
+</html>
